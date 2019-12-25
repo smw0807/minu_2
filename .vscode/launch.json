@@ -1,0 +1,26 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - jsonSimpleTest",
+            "request": "launch",
+            "mainClass": "jsonSimple.jsonSimpleTest",
+            "projectName": "minu_2_c4422b48"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - App",
+            "request": "launch",
+            "mainClass": "java_1.src.app.App",
+            "projectName": "minu_2_c4422b48"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - vscodeJavaTest",
+            "request": "launch",
+            "mainClass": "properties.test.vscodeJavaTest",
+            "projectName": "minu_2_c4422b48",
+            "jdkpath": "C:/Program Files/Java/jdk1.8.0_144/bin"
+        }
+    ]
+}
