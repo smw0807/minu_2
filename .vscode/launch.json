@@ -2,6 +2,26 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - SpringWebApplication",
+            "request": "launch",
+            "mainClass": "com.smw.spring_web.SpringWebApplication",
+            "projectName": "spring_web"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - jsonSimpleTest",
+            "request": "launch",
+            "mainClass": "jsonSimple.jsonSimpleTest"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - App",
+            "request": "launch",
+            "mainClass": "app.App",
+            "projectName": "java_1"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - jsonSimpleTest",
             "request": "launch",
             "mainClass": "jsonSimple.jsonSimpleTest",

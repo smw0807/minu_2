@@ -14,6 +14,7 @@ public class App {
         System.out.println("Hello Java");
         HashMap<String, Object> map = new HashMap();
         map = mapTest();
+        System.out.println("한글깨짐?");
         System.out.println(map);
     }
 }

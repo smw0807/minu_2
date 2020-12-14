@@ -28,6 +28,7 @@ public class jsonSimpleTest {
                 obj.put(key, map.get(key));
             }
         }
+        System.out.println("한글 깨짐?");
         System.out.println("---------");
         System.out.println(obj);
         
