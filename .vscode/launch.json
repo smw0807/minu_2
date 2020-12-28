@@ -2,6 +2,30 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch seedTest",
+            "request": "launch",
+            "mainClass": "seedTest"
+        },
+        {
+            "type": "java",
+            "name": "Launch euc_kr",
+            "request": "launch",
+            "mainClass": "euc_kr"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - euc_kr",
+            "request": "launch",
+            "mainClass": "part1.euc_kr"
+        },
+        {
+            "type": "java",
+            "name": "Launch hashmapTest",
+            "request": "launch",
+            "mainClass": "hashmap.hashmapTest"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - SpringWebApplication",
             "request": "launch",
             "mainClass": "com.smw.spring_web.SpringWebApplication",
@@ -19,20 +43,6 @@
             "request": "launch",
             "mainClass": "app.App",
             "projectName": "java_1"
-        },
-        {
-            "type": "java",
-            "name": "CodeLens (Launch) - jsonSimpleTest",
-            "request": "launch",
-            "mainClass": "jsonSimple.jsonSimpleTest",
-            "projectName": "minu_2_c4422b48"
-        },
-        {
-            "type": "java",
-            "name": "CodeLens (Launch) - App",
-            "request": "launch",
-            "mainClass": "java_1.src.app.App",
-            "projectName": "minu_2_c4422b48"
         },
         {
             "type": "java",
