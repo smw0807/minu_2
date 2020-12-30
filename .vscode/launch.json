@@ -2,6 +2,12 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch sha2",
+            "request": "launch",
+            "mainClass": "sha2"
+        },
+        {
+            "type": "java",
             "name": "Launch seedTest",
             "request": "launch",
             "mainClass": "seedTest"
