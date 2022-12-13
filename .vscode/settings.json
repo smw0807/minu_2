@@ -5,5 +5,11 @@
         "**/.settings": true,
         "**/.factorypath": true
     },
-    "java.configuration.updateBuildConfiguration": "interactive"
+    "java.configuration.updateBuildConfiguration": "interactive",
+    "java.configuration.runtimes": [
+        {
+            "name":"JavaSE-1.8",
+            "path": "C:\\Program Files\\AdoptOpenJDK\\java-1.8.0-openjdk-1.8.0.332-1.b09.ojdkbuild.windows.x86_64"
+        }
+    ],
 }
