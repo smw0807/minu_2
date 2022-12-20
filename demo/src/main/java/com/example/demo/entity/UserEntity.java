@@ -8,12 +8,12 @@ package com.example.demo.entity;
 
 import lombok.*;
 
+import com.example.demo.dto.UserDTO;
+
 import javax.persistence.*;
 
-@Getter // getter 메소드 생성
-@Builder // 빌더를 사용할 수 있게 함
-@AllArgsConstructor
-@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@Getter
+@NoArgsConstructor	//lombok. 기본 생성자 생성
 @Entity(name="user")
 public class UserEntity {
   @Id
@@ -30,9 +30,10 @@ public class UserEntity {
   @Column(nullable = false)
   private String user_desc;
 
-  public UserEntity(String user_id, String user_nm, String user_pw) {
-    this.user_id = user_id;
-    this.user_nm = user_nm;
-    this.user_pw = user_pw;
+  public void insert(UserDTO user) {
+    this.user_id = user.getId();
+    this.user_nm = user.getName();
+    this.user_pw = user.getPassword();
+    this.user_desc = user.getDesc();
   }
 }
