@@ -13,12 +13,21 @@ import java.util.List;
 @RestController // JSON 형태 결과값을 반환해준다.(@ResponseBody가 필요없음)
 @RequiredArgsConstructor // final 객체를 Constructor Injection 해줌 (Autowired 역할)
 @RequestMapping("/user")
-public class UserController implements UserService {
+public class UserController {
 
   private final UserRepository userRepository;
+  private final UserService userService;
 
   @GetMapping("/list")
-  public List<UserEntity> findAllUser() {
+  public List<UserEntity> findAllUser(@ModelAttribute UserDTO userDTO) {
+    System.out.println("######## S");
+    System.out.println(userDTO.getId());
+    System.out.println(userDTO.getName());
+    System.out.println(userDTO.getPassword());
+    System.out.println(userDTO.getDesc());
+    System.out.println("######## E");
+    // return userService.findById(String userDTO.getId());
+    // return userRepository.findAll(userDTO);
     return userRepository.findAll();
   }
 
@@ -27,11 +36,6 @@ public class UserController implements UserService {
 
   // }
 
-  @Override
-  public Long register(UserDTO user) {
-    // TODO Auto-generated method stub
-    return null;
-  }
 
   // @PostMapping("/add")
   // public UserEntity signUp() {

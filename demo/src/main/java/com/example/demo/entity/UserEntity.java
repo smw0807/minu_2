@@ -12,12 +12,12 @@ import com.example.demo.dto.UserDTO;
 
 import javax.persistence.*;
 
-@Getter
+@Getter //getter 자동생성
 @NoArgsConstructor	//lombok. 기본 생성자 생성
 @Entity(name="user")
 public class UserEntity {
-  @Id
-  // @GeneratedValue(strategy = GenerationType.IDENTITY)
+  
+  @Id // ID 값, Primary Key로 사용하겠다는 의미
   @Column(nullable = false, unique = true, length = 50)
   private String user_id;
 
@@ -30,7 +30,7 @@ public class UserEntity {
   @Column(nullable = false)
   private String user_desc;
 
-  public void insert(UserDTO user) {
+  public void User(UserDTO user) {
     this.user_id = user.getId();
     this.user_nm = user.getName();
     this.user_pw = user.getPassword();
