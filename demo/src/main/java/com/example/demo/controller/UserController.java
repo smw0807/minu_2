@@ -2,7 +2,6 @@ package com.example.demo.controller;
 
 import com.example.demo.dto.UserDTO;
 import com.example.demo.entity.UserEntity;
-import com.example.demo.repo.UserRepository;
 import com.example.demo.service.UserService;
 
 import lombok.RequiredArgsConstructor;
@@ -15,8 +14,7 @@ import java.util.List;
 @RequestMapping("/user")
 public class UserController {
 
-  private final UserRepository userRepository;
-  private final UserService userService;
+  private UserService userService;
 
   @GetMapping("/list")
   public List<UserEntity> findAllUser(@ModelAttribute UserDTO userDTO) {
@@ -26,9 +24,11 @@ public class UserController {
     System.out.println(userDTO.getPassword());
     System.out.println(userDTO.getDesc());
     System.out.println("######## E");
+    List<UserEntity> list = userService.findAll();
+    return list;
     // return userService.findById(String userDTO.getId());
     // return userRepository.findAll(userDTO);
-    return userRepository.findAll();
+    // return userRepository.findAll();
   }
 
   // @GetMapping("/list2")
