@@ -5,6 +5,8 @@ import com.example.demo.entity.UserEntity;
 import com.example.demo.service.UserService;
 
 import lombok.RequiredArgsConstructor;
+
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -17,7 +19,7 @@ public class UserController {
   private UserService userService;
 
   @GetMapping("/list")
-  public List<UserEntity> findAllUser(@ModelAttribute UserDTO userDTO) {
+  public ResponseEntity<?> findAllUser(@ModelAttribute UserDTO userDTO) {
     System.out.println("######## S");
     System.out.println(userDTO.getId());
     System.out.println(userDTO.getName());
@@ -25,7 +27,7 @@ public class UserController {
     System.out.println(userDTO.getDesc());
     System.out.println("######## E");
     List<UserEntity> list = userService.findAll();
-    return list;
+    return ResponseEntity.ok().body(list);
     // return userService.findById(String userDTO.getId());
     // return userRepository.findAll(userDTO);
     // return userRepository.findAll();

@@ -18,6 +18,7 @@ public class UserService {
   
   
   public List<UserEntity> findAll() {
+    System.out.println("여기 타나??1");
     return userRepository.findAll();
   }
   public List<UserEntity> findAll(UserDTO userDTO) {
