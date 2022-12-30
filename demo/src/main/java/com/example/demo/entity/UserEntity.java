@@ -18,22 +18,22 @@ import javax.persistence.*;
 public class UserEntity {
   
   @Id // ID 값, Primary Key로 사용하겠다는 의미
-  @Column(nullable = false, unique = true, length = 50)
-  private String user_id;
+  @Column(name = "user_id", nullable = false, unique = true, length = 50)
+  private String userId;
 
-  @Column(nullable = false, unique = true, length = 50)
-  private String user_nm;
+  @Column(name = "user_nm", nullable = false, unique = true, length = 50)
+  private String userNm;
 
-  @Column(nullable = false, unique = true, length = 30)
-  private String user_pw;
+  @Column(name = "user_pw", nullable = false, unique = true, length = 30)
+  private String userPw;
 
-  @Column(nullable = false)
-  private String user_desc;
+  @Column(name = "user_desc", nullable = false)
+  private String userDesc;
 
   public void User(UserDTO user) {
-    this.user_id = user.getId();
-    this.user_nm = user.getName();
-    this.user_pw = user.getPassword();
-    this.user_desc = user.getDesc();
+    this.userId = user.getId();
+    this.userNm = user.getName();
+    this.userPw = user.getPassword();
+    this.userDesc = user.getDesc();
   }
 }

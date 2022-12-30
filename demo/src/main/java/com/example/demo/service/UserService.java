@@ -2,7 +2,6 @@ package com.example.demo.service;
 
 import org.springframework.stereotype.Service;
 
-import com.example.demo.dto.UserDTO;
 import com.example.demo.entity.UserEntity;
 import com.example.demo.repo.UserRepository;
 
@@ -15,25 +14,8 @@ import lombok.RequiredArgsConstructor;;
 public class UserService {
   
   private UserRepository userRepository;
-  
-  
+
   public List<UserEntity> findAll() {
-    System.out.println("여기 타나??1");
     return userRepository.findAll();
   }
-  public List<UserEntity> findAll(UserDTO userDTO) {
-    System.out.println("여기 타나??2");
-    return userRepository.findAll(userDTO);
-  }
-  // private static UserRepository userRepository;
-
-  // public default List<UserEntity> userList(UserDTO userDTO) {
-  //   return userRepository.findAll(userDTO);
-  // }
-  // @Transactional
-  // public List<UserEntity> list(UserDTO userDTO) {
-  //   List<UserEntity> userList = UserRepository.findAll(userDTO);
-  //   return userList;
-  // }
-  
 }

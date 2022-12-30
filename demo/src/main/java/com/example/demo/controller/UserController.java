@@ -20,7 +20,7 @@ public class UserController {
 
   @GetMapping("/list")
   public ResponseEntity<?> findAllUser(@ModelAttribute UserDTO userDTO) {
-    System.out.println("######## S");
+    System.out.println("######## S3");
     System.out.println(userDTO.getId());
     System.out.println(userDTO.getName());
     System.out.println(userDTO.getPassword());
@@ -28,21 +28,5 @@ public class UserController {
     System.out.println("######## E");
     List<UserEntity> list = userService.findAll();
     return ResponseEntity.ok().body(list);
-    // return userService.findById(String userDTO.getId());
-    // return userRepository.findAll(userDTO);
-    // return userRepository.findAll();
   }
-
-  // @GetMapping("/list2")
-  // public List<UserEntity> findUser()  {
-
-  // }
-
-
-  // @PostMapping("/add")
-  // public UserEntity signUp() {
-  //   final UserEntity user = UserEntity.builder().user_id("smw002").user_nm("smw002").user_pw("123123123").build();
-  //   return UserRepository.save(user);
-  // }
-  
 }

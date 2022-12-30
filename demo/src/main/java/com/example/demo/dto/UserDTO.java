@@ -20,9 +20,9 @@ public class UserDTO {
 
   //repository를 통해 조회한 Entity를 DTO로 변환 용도
   public void UserReponseDto(UserEntity userEntity) {
-    this.id = userEntity.getUser_id();
-    this.name = userEntity.getUser_nm();
-    this.password = userEntity.getUser_pw();
-    this.desc = userEntity.getUser_desc();
+    this.id = userEntity.getUserId();
+    this.name = userEntity.getUserNm();
+    this.password = userEntity.getUserPw();
+    this.desc = userEntity.getUserDesc();
   }
 }
