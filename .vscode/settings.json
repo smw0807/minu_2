@@ -9,14 +9,15 @@
     "java.configuration.runtimes": [
         {
             "name":"JavaSE-1.8",
-            "path": "C:\\Program Files\\AdoptOpenJDK\\java-1.8.0-openjdk-1.8.0.332-1.b09.ojdkbuild.windows.x86_64"
-        },
-        {
-            "name":"JavaSE-11",
-            "path": "C:\\Program Files\\AdoptOpenJDK\\jdk-11.0.9.101-hotspot",
-            "default": true
+            "path": "D:\\java-1.8.0-openjdk-1.8.0.332"
         }
+        // ,
+        // {
+        //     "name":"JavaSE-11",
+        //     "path": "C:\\Program Files\\AdoptOpenJDK\\jdk-11.0.9.101-hotspot",
+        //     "default": true
+        // }
     ],
-    "spring-boot.ls.java.home": "C:\\Program Files\\AdoptOpenJDK\\jdk-11.0.9.101-hotspot",
+    "spring-boot.ls.java.home": "D:\\java-1.8.0-openjdk-1.8.0.332",
     "java.compile.nullAnalysis.mode": "automatic",
 }
