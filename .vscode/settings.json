@@ -10,7 +10,11 @@
         {
             "name":"JavaSE-1.8",
             "path": "D:\\java-1.8.0-openjdk-1.8.0.332"
-        }
+        },
+        {
+            "name":"JavaSE-19",
+            "path": "D:\\java\\jdk-19.0.2"
+        },
         // ,
         // {
         //     "name":"JavaSE-11",
@@ -18,6 +22,6 @@
         //     "default": true
         // }
     ],
-    "spring-boot.ls.java.home": "D:\\java-1.8.0-openjdk-1.8.0.332",
+    "spring-boot.ls.java.home": "D:\\java\\jdk-19.0.2",
     "java.compile.nullAnalysis.mode": "automatic",
 }
