@@ -2,6 +2,12 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch WebApplication",
+            "request": "launch",
+            "mainClass": "com.example.demo.WebApplication"
+        },
+        {
+            "type": "java",
             "name": "Launch DemoApplication",
             "request": "launch",
             "mainClass": "com.example.demo.DemoApplication"
