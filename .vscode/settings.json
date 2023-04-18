@@ -29,5 +29,20 @@
   ],
   //   "spring-boot.ls.java.home": "D:\\java\\jdk-19.0.2",
   "spring-boot.ls.java.home": "/Library/Java/JavaVirtualMachines/adoptopenjdk-14.jdk/Contents/Home",
-  "java.compile.nullAnalysis.mode": "automatic"
+  "java.compile.nullAnalysis.mode": "automatic",
+  "sqltools.connections": [
+    {
+      "mysqlOptions": {
+        "authProtocol": "default"
+      },
+      "previewLimit": 50,
+      "server": "localhost",
+      "port": 3306,
+      "driver": "MySQL",
+      "name": "macDB",
+      "database": "SMW_DB_1",
+      "username": "root",
+      "askForPassword": true
+    }
+  ]
 }
