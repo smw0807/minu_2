@@ -1,27 +1,33 @@
 {
-    "files.exclude": {
-        "**/.classpath": true,
-        "**/.project": true,
-        "**/.settings": true,
-        "**/.factorypath": true
-    },
-    "java.configuration.updateBuildConfiguration": "automatic",
-    "java.configuration.runtimes": [
-        {
-            "name":"JavaSE-1.8",
-            "path": "D:\\java-1.8.0-openjdk-1.8.0.332"
-        },
-        {
-            "name":"JavaSE-19",
-            "path": "D:\\java\\jdk-19.0.2"
-        },
-        // ,
-        // {
-        //     "name":"JavaSE-11",
-        //     "path": "C:\\Program Files\\AdoptOpenJDK\\jdk-11.0.9.101-hotspot",
-        //     "default": true
-        // }
-    ],
-    "spring-boot.ls.java.home": "D:\\java\\jdk-19.0.2",
-    "java.compile.nullAnalysis.mode": "automatic",
+  "files.exclude": {
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true
+  },
+  "java.configuration.updateBuildConfiguration": "automatic",
+  "java.configuration.runtimes": [
+    // {
+    //     "name":"JavaSE-1.8",
+    //     "path": "D:\\java-1.8.0-openjdk-1.8.0.332"
+    // },
+    // {
+    //     "name":"JavaSE-19",
+    //     "path": "D:\\java\\jdk-19.0.2"
+    // },
+    // ,
+    // {
+    //     "name":"JavaSE-11",
+    //     "path": "C:\\Program Files\\AdoptOpenJDK\\jdk-11.0.9.101-hotspot",
+    //     "default": true
+    // }
+    //맥북
+    {
+      "name": "JavaSE-14",
+      "path": "/Library/Java/JavaVirtualMachines/adoptopenjdk-14.jdk/Contents/Home"
+    }
+  ],
+  //   "spring-boot.ls.java.home": "D:\\java\\jdk-19.0.2",
+  "spring-boot.ls.java.home": "/Library/Java/JavaVirtualMachines/adoptopenjdk-14.jdk/Contents/Home",
+  "java.compile.nullAnalysis.mode": "automatic"
 }
