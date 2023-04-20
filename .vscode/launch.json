@@ -2,6 +2,12 @@
   "configurations": [
     {
       "type": "java",
+      "name": "ReceiverTest",
+      "request": "launch",
+      "mainClass": "ReceiverTest"
+    },
+    {
+      "type": "java",
       "name": "Test1",
       "request": "launch",
       "mainClass": "Test1"
