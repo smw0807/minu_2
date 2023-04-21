@@ -1,1 +1,0 @@
-java ./src/App.java STOP
