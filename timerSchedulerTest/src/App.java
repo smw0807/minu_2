@@ -1,41 +1,45 @@
-import java.sql.Time;
 import java.util.TimerTask;
+import java.util.Timer;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
 
 public class App {
+  private static ScheduledExecutorService scheduler;
   private Timer timer;
 
   public App() {
-      timer = new Time();
+      timer = new Timer();
   }
 
-  public void excuteScheduler(TimerTask task, int hour, int minute, int second) {
-    Calendar calendar = Calendar.getInstance();
-    calendar.set(Calendar.HOUR_OF_DAY, hour);
-    calendar.set(Calendar.MINUTE, minute);
-    calendar.set(Calendar.SECOND, second);
 
-    Date scheduledTime = calendar.getTime();
+  private static void startScheduler() {
+    scheduler = Executors.newSingleThreadScheduledExecutor();
+    scheduler.scheduleAtFixedRate(App::Run, 0, 5, TimeUnit.SECONDS);
+    System.out.println("Scheduler started");
+  }
 
-    if (scheduledTime.before(new Date())) {
-      scheduledTime = new Date(scheduledTime.getTime() + 24 * 60 * 60 * 1000);
+  private static void stopScheduler() {
+    if (scheduler != null) {
+      scheduler.shutdown();
+      System.out.println("Scheduler stopped");
     }
+  }
 
-    long delay = scheduledTime.getTime() - new Date().getTime();
-
-    timer.scheduleAtFixedRate(task, delay, 24 * 60 * 60 * 1000);
+  public static void Run() {
+    System.out.println("Run!!!");
   }
 
   public static void main(String[] args) throws Exception {
-    System.out.println("Hello, World!");
-    App app = new App();
-    app.excuteScheduler(new TimerTask() {
-      ListenerTest test = new ListenerTest();
-
-      @Override
-      public void run() {
-        // TODO Auto-generated method stub
-        test.ExceptionTest();
-      }
-    }, 22, 33, 0);
+    System.out.println("Hello World!!");
+    String mode = args[0];
+    System.out.println("MODE : " + mode);
+    if ("START".equals(mode)) {
+      startScheduler();
+    } else if ("STOP".equals(mode)) {
+      stopScheduler();
+    } else {
+      throw new Error("mode check");
+    }
   }
 }
